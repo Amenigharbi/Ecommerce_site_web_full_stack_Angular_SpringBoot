@@ -1,6 +1,6 @@
 package com.codeWithProjects.Ecomm.repository;
 
-import
+
 import com.codeWithProjects.Ecomm.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
