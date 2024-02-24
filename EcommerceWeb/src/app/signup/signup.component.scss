@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #67bbc8; /* Ajout d'une couleur de fond */
+}
+
+mat-card {
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  background-color: #9bbbc3; /* Ajout d'une couleur de fond */
+  border-radius: 10px; /* Ajout d'une bordure arrondie */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-card-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333; /* Changement de couleur de texte */
+}
+
+button {
+  width: 100%;
+  background-color: #007bff; /* Changement de couleur de fond */
+  color: #fff; /* Changement de couleur de texte */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0; /* Ajout de rembourrage */
+  cursor: pointer; /* Changement de curseur */
+  transition: background-color 0.3s ease; /* Ajout d'une transition */
+}
+
+button:hover {
+  background-color: #0056b3; /* Changement de couleur de fond au survol */
+}
+
+@media screen and (max-width: 600px) {
+  mat-card-title {
+    font-size: 20px;
+  }
+  mat-form-field {
+    margin-bottom: 10px;
+  }
+}
+
+.error-snackbar {
+  background-color: red !important;
+  color: #fff; /* Changement de couleur de texte */
+  padding: 10px; /* Ajout de rembourrage */
+  border-radius: 5px; /* Ajout d'une bordure arrondie */
+}
