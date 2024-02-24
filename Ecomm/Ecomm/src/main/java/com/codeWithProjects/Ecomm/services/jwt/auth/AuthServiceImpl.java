@@ -5,12 +5,10 @@ import com.codeWithProjects.Ecomm.dto.UserDto;
 import com.codeWithProjects.Ecomm.entity.User;
 import com.codeWithProjects.Ecomm.enums.UserRole;
 import com.codeWithProjects.Ecomm.repository.UserRepository;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class AuthServiceImpl implements AuthService {
@@ -36,6 +34,20 @@ public class AuthServiceImpl implements AuthService {
      public Boolean hasUserWithEmail(String email){
           return userRepository.findFirstByEmail(email).isPresent();
 
+     }
+
+     @PostConstruct
+     public void createAdminAccount()
+     {
+          User adminAccount=userRepository.findByRole(UserRole.ADMIN);
+          if(null==adminAccount){
+               User user=new User();
+               user.setEmail("admin@test.com");
+               user.setName("admin");
+               user.setRole(UserRole.ADMIN);
+               user.setPassword(new BCryptPasswordEncoder().encode("admin"));
+               userRepository.save(user);
+          }
      }
 
 }
