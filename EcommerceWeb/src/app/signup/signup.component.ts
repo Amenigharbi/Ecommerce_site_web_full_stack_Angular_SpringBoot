@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '../services/auth/auth.service';
- 
+
 
 @Component({
   selector: 'app-signup',

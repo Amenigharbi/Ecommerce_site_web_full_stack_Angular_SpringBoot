@@ -3,16 +3,16 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #67bbc8; /* Ajout d'une couleur de fond */
+  background-color: #67bbc8;
 }
 
 mat-card {
   width: 400px;
   max-width: 90%;
   padding: 20px;
-  background-color: #9bbbc3; /* Ajout d'une couleur de fond */
-  border-radius: 10px; /* Ajout d'une bordure arrondie */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form {
@@ -30,22 +30,22 @@ mat-card-title {
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
-  color: #333; /* Changement de couleur de texte */
+  color: #333;
 }
 
 button {
   width: 100%;
-  background-color: #007bff; /* Changement de couleur de fond */
-  color: #fff; /* Changement de couleur de texte */
+  background-color: #007bff;
+  color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 0; /* Ajout de rembourrage */
-  cursor: pointer; /* Changement de curseur */
-  transition: background-color 0.3s ease; /* Ajout d'une transition */
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3; /* Changement de couleur de fond au survol */
+  background-color: #0056b3;
 }
 
 @media screen and (max-width: 600px) {
@@ -59,7 +59,7 @@ button:hover {
 
 .error-snackbar {
   background-color: red !important;
-  color: #fff; /* Changement de couleur de texte */
-  padding: 10px; /* Ajout de rembourrage */
-  border-radius: 5px; /* Ajout d'une bordure arrondie */
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
 }
