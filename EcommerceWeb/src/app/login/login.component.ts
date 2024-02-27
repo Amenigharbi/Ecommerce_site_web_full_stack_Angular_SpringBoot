@@ -34,7 +34,7 @@ export class LoginComponent {
 
     this.authService.login(username,password).subscribe(
       (res)=>{
-        this.snackBar.open('login sucess','ok',{duration:5000});
+        this.snackBar.open('login success','ok',{duration:5000});
       },
       (error)=>{
         this.snackBar.open('bad credentials','ERROR',{duration:5000});
