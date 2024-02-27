@@ -16,13 +16,13 @@ export class AuthService {
   }
 
   login(username: string, password: string): any {
-    const headers = new HttpHeaders().set('Content-type', 'application/json');
-    const body = { username, password };
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    const body = {username, password };
     return this.http
-      .post(BASIC_URL + 'authenticate', body, { headers, observe: 'response' })
+      .post(BASIC_URL+'authenticate', body, { headers, observe: 'response' })
       .pipe(
         map((res) => {
-          const token = res.headers.get('authorization').substring(7);
+          const token = res.headers.get('authorization')?.substring(7);
           const user = res.body;
           if(token && user)
           {
