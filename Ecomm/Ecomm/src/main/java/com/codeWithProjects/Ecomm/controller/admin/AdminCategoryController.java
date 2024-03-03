@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AdminCategoryController {
     private final CategoryService categoryService;
 
-    @PostMapping("category")
+    @PostMapping("/category")
     public ResponseEntity<Category> createCategory (@RequestBody CategoryDto categoryDto){
          Category category=categoryService.createcategory(categoryDto);
          return ResponseEntity.status(HttpStatus.CREATED).body(category);

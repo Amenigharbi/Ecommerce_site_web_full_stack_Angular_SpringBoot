@@ -4,8 +4,6 @@ import com.codeWithProjects.Ecomm.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.OffsetDateTime;
-
 @Entity
 @Data
 @Table(name="users")
@@ -19,7 +17,6 @@ public class User {
     private String password;
     private String name;
     private UserRole role;
-    private String resetToken;
     @Lob
     @Column(columnDefinition = "longblob")
     private byte[] img;
