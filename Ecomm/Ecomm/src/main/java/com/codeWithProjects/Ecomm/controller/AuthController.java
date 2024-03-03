@@ -6,7 +6,7 @@ import com.codeWithProjects.Ecomm.dto.SignupRequest;
 import com.codeWithProjects.Ecomm.dto.UserDto;
 import com.codeWithProjects.Ecomm.entity.User;
 import com.codeWithProjects.Ecomm.repository.UserRepository;
-import com.codeWithProjects.Ecomm.services.jwt.auth.AuthService;
+import com.codeWithProjects.Ecomm.services.auth.AuthService;
 import com.codeWithProjects.Ecomm.utils.JwtUtil;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +19,9 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -35,7 +37,6 @@ public class AuthController {
     public static final String HEADER_STRING="Authorization";
 
     private final AuthService authService;
-
 
     @PostMapping("/authenticate")
     public void createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest, HttpServletResponse response ) throws IOException, JSONException {
@@ -71,5 +72,7 @@ public class AuthController {
         UserDto userDto=authService.createUser(signupRequest);
        return new ResponseEntity<>(userDto,HttpStatus.OK);
     }
+
+
 
 }

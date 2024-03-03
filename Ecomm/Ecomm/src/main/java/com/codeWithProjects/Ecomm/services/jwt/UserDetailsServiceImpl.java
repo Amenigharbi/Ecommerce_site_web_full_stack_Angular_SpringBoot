@@ -1,7 +1,7 @@
 package com.codeWithProjects.Ecomm.services.jwt;
 
-import com.codeWithProjects.Ecomm.repository.UserRepository;
 import com.codeWithProjects.Ecomm.entity.User;
+import com.codeWithProjects.Ecomm.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -21,4 +21,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if(optionalUser.isEmpty())throw new UsernameNotFoundException("username not found ",null);
         return new org.springframework.security.core.userdetails.User(optionalUser.get().getEmail(),optionalUser.get().getPassword(),new ArrayList<>());
     }
+
+
 }
