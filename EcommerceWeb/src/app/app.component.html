@@ -3,9 +3,7 @@
 
 <mat-toolbar color="primary" class="navbar">
   <span class="navbar-brand">Ecommerce</span>
-
   <span class="spacer"></span>
-
   <button mat-button routerLink="/order" routerLinkActive="active" class="custom-button">Track Order</button>
   <button mat-button routerLink="/signup" routerLinkActive="active" class="custom-button">Register</button>
   <button mat-button routerLink="/login" routerLinkActive="active" class="custom-button">Login</button>
@@ -14,8 +12,6 @@
 
 
 <div *ngIf="isAdminLoggedIn">
-
-
   <mat-toolbar color="primary" class="navbar">
     <span class="navbar-brand">Ecommerce</span>
     <span class="spacer"></span>
@@ -29,8 +25,6 @@
     <button mat-button routerLinkActive="active" (click)="logout()">LogOut</button>
   </mat-toolbar>
   </div>
-
-
 <div *ngIf="isCustomerLoggedIn">
   <mat-toolbar color="primary" class="navbar">
     <span class="navbar-brand">Ecommerce</span>
@@ -41,7 +35,6 @@
     <button mat-button routerLink="/customer/wishlist" routerLinkActive="active">WishList</button>
     <button mat-button routerLink="/customer/profile" routerLinkActive="active">Profile</button>
     <button mat-button  routerLinkActive="active" (click)="logout()">LogOut</button>
-
   </mat-toolbar>
   </div>
 <router-outlet>
